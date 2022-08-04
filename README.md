@@ -31,4 +31,13 @@ statistics about student performance must be provided for each quiz.
 The system starts with one common login page, and based on who logs in, displays 
 appropriate navigation options
 
+**ER diagram**
 ![er-diagram](https://user-images.githubusercontent.com/44130212/182846627-dd3f6d47-2ba3-4836-ae2b-d7754a676c9d.png)
+
+
+**Flow chart**
+![flowchart](https://user-images.githubusercontent.com/44130212/182847075-10655146-1aa7-4306-b133-e334e8f4a7c9.png)
+
+
+
+
