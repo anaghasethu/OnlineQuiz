@@ -1,6 +1,7 @@
 # OnlineQuiz
 
-#Introduction
+**Introduction**
+
 Build a web page that can deliver quizzes that a student can take and view their scores 
 afterwards. An administrator should be able to observe the grades of all students.
 The system must contain a set of at least four quizzes divided into two categories, aptitude 
@@ -11,7 +12,7 @@ undergoing might have: the questions and answers are just one part of the quiz s
 needs a way to manage students, administrators; have ways of displaying scores, 
 performance, progress…
 
-#Basic operations
+**Basic operations**
 
 A student must be able to login and navigate to either their Quizzes or their Gradebook. The 
 Gradebook must contain descriptive statistics of their performance in each quiz, category, 
