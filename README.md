@@ -20,7 +20,7 @@ and a report of their performance as a whole. The Quizzes section must provide a
 take a quiz. Each quiz consists of a set number of multiple choice questions. Students must 
 be able to navigate between the questions, choose an answer for each question, and submit 
 their answers at the end of the quiz. Once submitted, they should have their answers 
-evaluated and a screen must be displayed showing their performance.
+evaluated and a screen must be displayed showing their performance.!
 
 
 An administrator must be able to login and navigate to either Students or Quizzes. The 
@@ -30,3 +30,5 @@ section must contain a list of quizzes that exist in the system and detailed col
 statistics about student performance must be provided for each quiz.
 The system starts with one common login page, and based on who logs in, displays 
 appropriate navigation options
+
+![er-diagram](https://user-images.githubusercontent.com/44130212/182846627-dd3f6d47-2ba3-4836-ae2b-d7754a676c9d.png)
