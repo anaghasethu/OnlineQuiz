@@ -134,7 +134,7 @@ public class Question {
 		this.quizID = quizID;
 	}
 	
-	public Integer Correctanswers() {
+	public Integer Correctanswers(Integer questionID ) {
 		
 		if(getAnswer() == getChoice())
 			grade =+ 1;
