@@ -1,0 +1,32 @@
+img{
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 300px;
+    width: 350px;
+}
+
+form{
+    margin-top: 80px;
+    /* margin: 5 auto; */
+    height: 300px;
+    width: 350px;
+    border: 0.01px solid rgba(195, 112, 255, 0.719) ;
+    box-shadow: 20px 20px 50px rgba(195, 112, 255, 0.719);
+}
+
+input{
+    margin-left: 15%;
+    width: 250px;
+    border-radius: 20px;
+}
+
+button{
+    border-radius: 10px;
+    margin-left: 36%;
+    width: 80px;
+    background-color: #6320ff;
+    color: white;
+}
+form h4{
+    padding-left: 50px;
+}

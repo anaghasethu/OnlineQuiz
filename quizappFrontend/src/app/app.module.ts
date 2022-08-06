@@ -12,7 +12,9 @@ import { StudentComponent } from './components/student/student.component';
 
 const route : Routes = [
   {path: '',  component:LoginComponent},
-  {path:'student', component: StudentComponent}]
+  {path:'student', component: StudentComponent},
+  {path : 'quiz/:quizId' , component : QuizComponent},
+  {path : 'test/:categoryName' , component : QuiztestComponent}]
 
 @NgModule({
   declarations: [

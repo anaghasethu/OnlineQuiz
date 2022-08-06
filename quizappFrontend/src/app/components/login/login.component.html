@@ -1,12 +1,21 @@
-<div class="column">
+<!-- <div class="column">
     <div class="card">
 <button class="btn btn-info" (click)="GotoStudent()">Student</button>
 </div>
-</div> 
+</div>  -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm">
+            <img src="../../../assets/images/login2.jpeg" alt="">
+        </div>
+         <div class="col-sm">
+            <form #loginForm="ngForm" class="form-group pt-3" (ngSubmit)="loginSubmit2(loginForm.value)" novalidate>
+                <h4 class="mb-2 ms-5">Login here</h4> <br>
+                <input type="text" class="form-control" placeholder="Enter your userID" name="userID" ngModel #userID=ngModel required minlength="2" maxlength="30"><br/>
+                <input class="form-control" type="password" placeholder="Enter password" name="password" ngModel #password=ngModel required minlength="2" maxlength="30"><br/>
+                <button class="btn" [disabled]="!loginForm.valid">Login</button>
+            </form>
+         </div>
+    </div>
+</div>
 
-
-<form #loginForm="ngForm" class="form-group" (ngSubmit)="loginSubmit2(loginForm.value)" novalidate>
-    Enter userID<input type="text" class="form-control" name="userID" ngModel #userID=ngModel required minlength="2" maxlength="30"><br/>
-    Enter password<input class="form-control" type="password" name="password" ngModel #password=ngModel required minlength="2" maxlength="30"><br/>
-    <button class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
-</form>

@@ -1,1 +1,19 @@
-<p>quiztest works!</p>
+<table class="table table-bordered table-info table-striped   table-hover">
+  
+    <tr>
+
+        <th>Quiz ID</th>
+        <th> quiz Name</th>
+        <th>Category</th>
+    </tr><div class=""></div>
+
+    <tr *ngFor="let q of quiz">
+        <a (click)="goToTest(q.quizId)">
+    <td>{{q.quizId}}</td>
+    <td>{{q.quizName}}</td>
+    <td>{{q.categoryName}}</td>
+       </a>
+
+    <td> 
+    </tr>
+    </table>

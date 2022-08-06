@@ -44,6 +44,8 @@ export class LoginComponent implements OnInit {
         console.log(loginForm.userID)
         console.log(user.password)
         console.log(loginForm.password)
+        localStorage.setItem('id' , user.userID)
+        localStorage.getItem('id')
         this.route.navigateByUrl("/student")
       }else if(((loginForm.userID === user.userID) && (loginForm.password === user.password) && (user.role === "role"))){
         console.log(user.userID);
