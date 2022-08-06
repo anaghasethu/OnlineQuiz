@@ -1,19 +1,22 @@
-<table class="table table-bordered table-info table-striped   table-hover">
-  
-    <tr>
+<a href="#" class="btn btn-light btn-lg" (click)="Previous()">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<h3 class="mt-5 mb-4">Test your knowledge..</h3>
 
-        <th>Quiz ID</th>
-        <th> quiz Name</th>
-        <th>Category</th>
-    </tr><div class=""></div>
-
-    <tr *ngFor="let q of quiz">
-        <a (click)="goToTest(q.quizId)">
-    <td>{{q.quizId}}</td>
-    <td>{{q.quizName}}</td>
-    <td>{{q.categoryName}}</td>
-       </a>
-
-    <td> 
-    </tr>
+<div class="container">
+    <table class='table table-bordered table-light table-striped mt-2 mb-lg-0'>
+        <thead>
+            <tr>
+                <th>Quiz ID</th>
+                <th>Quiz</th>
+                <th>Category</th>
+            </tr>
+    
+        </thead>
+        <tr  *ngFor="let p of quiz" (click)="goToTest(p.quizId)">
+                <td>{{p.quizId }} </td>
+                <td>{{p.quizName}}</td>
+                <td>{{p.categoryName}}</td>
+        </tr>
     </table>
+</div>

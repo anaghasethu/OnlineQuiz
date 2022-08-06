@@ -1,0 +1,21 @@
+.container{
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 23%;
+}
+h3{
+    text-align: center;
+}
+
+th{
+    text-align: center;
+    height: 30px;
+}
+
+td{
+    height: 50px;
+}
+
+table{
+    width: 600px;
+}
