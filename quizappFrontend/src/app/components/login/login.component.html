@@ -1,0 +1,12 @@
+<div class="column">
+    <div class="card">
+<button class="btn btn-info" (click)="GotoStudent()">Student</button>
+</div>
+</div> 
+
+
+<form #loginForm="ngForm" class="form-group" (ngSubmit)="loginSubmit2(loginForm.value)" novalidate>
+    Enter userID<input type="text" class="form-control" name="userID" ngModel #userID=ngModel required minlength="2" maxlength="30"><br/>
+    Enter password<input class="form-control" type="password" name="password" ngModel #password=ngModel required minlength="2" maxlength="30"><br/>
+    <button class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+</form>
