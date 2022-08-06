@@ -10,6 +10,8 @@ import { ManageserviceService } from 'src/app/services/manageservice.service';
 })
 export class LoginComponent implements OnInit {
 
+  
+
   constructor(private service: ManageserviceService, private route: Router) { }
   users: User[];
   ngOnInit(): void {
@@ -48,14 +50,10 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('id' , user.userID)
         localStorage.getItem('id')
         this.route.navigateByUrl("/student")
-      }
-      else if(((loginForm.userID === user.userID) && (loginForm.password === user.password) && (user.role === "admin"))){
+      }else if(((loginForm.userID === user.userID) && (loginForm.password === user.password) && (user.role === "role"))){
         console.log(user.userID);
         this.service.setUserLoggedIn();
         this.route.navigateByUrl("/admin");
-      }
-      else{
-        alert("Invalid credentials.. Please check..!!!")
       }
     })
   }

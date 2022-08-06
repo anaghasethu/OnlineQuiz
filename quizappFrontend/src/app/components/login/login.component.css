@@ -5,17 +5,13 @@ img{
     width: 350px;
 }
 
-form h4{
-    margin-left: 70px !important;
-}
-
 form{
     margin-top: 80px;
     /* margin: 5 auto; */
     height: 300px;
     width: 350px;
-    border: 0.01px solid rgba(220, 172, 255, 0.719) ;
-    box-shadow: 20px 20px 50px rgba(211, 150, 255, 0.719);
+    border: 0.01px solid rgba(195, 112, 255, 0.719) ;
+    box-shadow: 20px 20px 50px rgba(195, 112, 255, 0.719);
 }
 
 input{

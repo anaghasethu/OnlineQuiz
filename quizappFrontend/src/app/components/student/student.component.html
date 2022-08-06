@@ -5,7 +5,7 @@
 <h3 class="lead">Here are the categories..!!</h3>
 <div class="container">
     <div class="row">
-        <div class="col-sm-3 pb-5" *ngFor="let quizname of category">
+        <div class="col-sm-4 pb-5" *ngFor="let quizname of category">
             <div class="card">
                 <button class="btn card-body" (click)=" GotoQuiz(quizname.category)">{{quizname.category}}</button>
             </div>
