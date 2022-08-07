@@ -55,6 +55,9 @@ export class LoginComponent implements OnInit {
         this.service.setUserLoggedIn();
         this.route.navigateByUrl("/admin");
       }
+      else{
+        alert("Invalid credentials..!!");
+      }
     })
   }
 

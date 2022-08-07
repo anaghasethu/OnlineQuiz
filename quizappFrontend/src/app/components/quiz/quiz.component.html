@@ -1,76 +1,14 @@
-<!--
- <table class="table table-bordered table-info table-striped   table-hover">
-  
-    <tr>
+<div class="container">
+    <div class="question pt-5 pb-5" *ngFor="let que of question">
+        <p><b>{{que.question_Q}}</b></p>
+        <input type="checkbox" id="option1" name="option1" (click)="checkAnswer(que.option1,que.answer)" value="{{que.option1}}">
+        {{que.option1}}<br>
+        <input type="checkbox" id="option2" name="option2" (click)="checkAnswer(que.option2,que.answer)" value="{{que.option2}}">
+        {{que.option2}}<br>
+        <input type="checkbox" id="option3" name="option3" (click)="checkAnswer(que.option3,que.answer)" value="{{que.option3}}">
+        {{que.option3}}<br>
+        <input type="checkbox" id="option4" name="option4" (click)="checkAnswer(que.option4,que.answer)" value="{{que.option4}}">
+        {{que.option4}} <br>
+    </div>
+</div>
 
-        <th>Question Id</th>
-        <th> question</th>
-        <th>Option1</th>
-        <th>option2</th>
-        <th>option3</th>
-        <th>option4</th>
-        <th>QuizID</th>
-        <th>choice</th>
-    </tr>
-
-    <tr *ngFor="let que of question">
-    <td>{{que.questionID}}</td>
-    <td>{{que.question_Q}}</td>
-    <td>{{que.option1}}</td>
-    <td>{{que.option2}}</td>
-    <td>{{que.option3}}</td>
-    <td>{{que.option4}}</td>
-    <td>{{que.quizID}}</td>
-    <td>{{que.choice}}</td>
-
-    <td> 
-    </tr>
-    </table>  -->
-
-    
-    <html>
-        <head>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        
-        </head>
-        
-        
-        <body>
-           <h1>Quiz</h1>
-        
-           <table class="table table-bordered table-info table-striped   table-hover">
-        
-           <tr *ngFor="let que of question">
-            <td>{{que.question_Q}}</td>
-            
-            <input type="checkbox" id="option1" name="option1" (click)="checkAnswer(que.option1,que.answer)" value="{{que.option1}}">
-            <label for="option1"> {{que.option1}}</label><br>
-            <input type="checkbox" id="option2" name="option2" (click)="checkAnswer(que.option2,que.answer)" value="{{que.option2}}">
-            <label for="option2"> {{que.option2}}</label><br>
-            <input type="checkbox" id="option3" name="option3" (click)="checkAnswer(que.option3,que.answer)" value="{{que.option3}}">
-            <label for="option3">{{que.option3}}</label><br>
-            <input type="checkbox" id="option4" name="option4" (click)="checkAnswer(que.option4,que.answer)" value="{{que.option4}}">
-            <label for="option4"> {{que.option4}}</label><br> 
-
-
-            <!--
-            <input type="checkbox" [checked]="que.option1 == que.answer"/>
-            <label for="option1"> {{que.option1}}</label><br>
-            <input type="checkbox" [checked]="que.option2 == que.answer"/>
-            <label for="option1"> {{que.option2}}</label><br>
-            <input type="checkbox" [checked]="que.option3 == que.answer"/>
-            <label for="option1"> {{que.option3}}</label><br>
-            <input type="checkbox" [checked]="que.option4 == que.answer"/>
-            <label for="option1"> {{que.option4}}</label><br>
-           </tr> -->
-        </table>
-        <button type="button" class="btn btn-info"  (click)="submitQuiz()">Submit</button>
-        
-        
-        
-        </body>
-        
-        
-        </html>
-        
