@@ -26,17 +26,22 @@ public class Result {
 	
 	@Column(name="totalcorrect")
 	public Integer totalCorrect;
+	
+	@Column(name = "quizname")
+	public String quizName;
 
 	public Result() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Result(String userID, Integer quizID, Integer totalCorrect) {
+	public Result(Integer resultID, String userID, Integer quizID, Integer totalCorrect, String quizName) {
 		super();
+		this.resultID = resultID;
 		this.userID = userID;
 		this.quizID = quizID;
 		this.totalCorrect = totalCorrect;
+		this.quizName = quizName;
 	}
 
 	public Integer getResultID() {
@@ -71,12 +76,20 @@ public class Result {
 		this.totalCorrect = totalCorrect;
 	}
 
+	public String getQuizName() {
+		return quizName;
+	}
+
+	public void setQuizName(String quizName) {
+		this.quizName = quizName;
+	}
+
 	@Override
 	public String toString() {
 		return "Result [resultID=" + resultID + ", userID=" + userID + ", quizID=" + quizID + ", totalCorrect="
-				+ totalCorrect + "]";
+				+ totalCorrect + ", quizName=" + quizName + "]";
 	}
-	
+
 	
 	
 	
