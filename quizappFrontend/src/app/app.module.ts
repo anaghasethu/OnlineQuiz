@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AuthGuard } from './auth.guard';
 import { HttpClientModule } from '@angular/common/http';
 import { Router,RouterModule,Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -21,15 +21,15 @@ import { StudentperformanceComponent } from './components/studentperformance/stu
 
 const route : Routes = [
   {path: '',  component:LoginComponent},
-  {path:'student', component: StudentComponent},
-  {path : 'quiz/:quizId' , component : QuizComponent},
+  {path:'student',  component: StudentComponent},
+  {path : 'quiz/:quizId' ,component : QuizComponent},
   {path : 'test/:categoryName' , component : QuiztestComponent},
   {path :'result' ,component : ResultpageComponent},
   {path : 'resultfail',component : ResultfailComponent},
   {path : 'stu_homepage',component : StudenthomepageComponent},
   {path : 'gradebook' , component : GradebookComponent},
-  {path : 'admin' , component : AdminhomepageComponent},
-  {path : 'studentlist' , component : StudentslistComponent},
+  {path : 'admin' ,  component : AdminhomepageComponent},
+  {path : 'studentlist' ,component : StudentslistComponent},
   {path : 'quizlist', component : QuizlistComponent},
   {path : 'quizquestion/:quizId',component : QuizquestionsComponent},
   {path : 'studentperformance/:userid',component : StudentperformanceComponent}

@@ -34,6 +34,11 @@ export class GradebookComponent implements OnInit {
 
   }
 
+  backToMain(){
+    this.route.navigateByUrl("/stu_homepage")
+  }
+
+
   listOfQuizes(){
     this.cat_service.getAllCategories().subscribe(data=>{
       console.log(data); 

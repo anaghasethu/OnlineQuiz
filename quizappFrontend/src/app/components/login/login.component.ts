@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
     this.listOfUser();
   }
 
+  
+
   listOfUser(){
     this.service.getAllUsers().subscribe(data=>{
       console.log(data); 
@@ -46,11 +48,13 @@ export class LoginComponent implements OnInit {
         console.log(loginForm.password)
         localStorage.setItem('id' , user.userID)
         localStorage.getItem('id')
+        localStorage.setItem('name',user.userName)
         this.route.navigateByUrl("/stu_homepage")
       }else if(((loginForm.userID === user.userID) && (loginForm.password === user.password) && (user.role === "admin"))){
         console.log(user.userID);
         localStorage.setItem('id' , user.userID)
         localStorage.getItem('id')
+        localStorage.setItem('name',user.userName)
         this.route.navigateByUrl("/admin");
       }
     })

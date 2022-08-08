@@ -33,7 +33,11 @@ export class StudentComponent implements OnInit {
   }
 
   backToMain(){
-    this.route.navigateByUrl("/")
+    this.route.navigateByUrl("/stu_homepage")
+  }
+
+  goToPre(){
+    this.route.navigateByUrl("/student")
   }
 
   listOfQuizes(){

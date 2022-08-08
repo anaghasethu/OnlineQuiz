@@ -1,7 +1,8 @@
-<br><br><br>
+<body>
+    <br><br><br>
 <p class="ms-5"><i>Select the correct answers from the options given.</i></p>
 <p class="ms-5"><b>All the best..!!!</b></p>
-   
+   <h2 style="text-align: center;"><b>Quiz: {{Quizname}}</b></h2>
         <div class="container">
             <div class="question pt-3 pb-3" *ngFor="let que of question">
                 <p><b>{{que.question_Q}}</b></p>
@@ -18,4 +19,4 @@
             <button type="button" class="btn btn-outline-success btn-lg"  (click)="submitQuiz()">Submit</button>
         </div>
         
-        
+</body>

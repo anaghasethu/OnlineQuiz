@@ -26,8 +26,6 @@ public interface ResultRepository extends JpaRepository<Result , Integer>{
 	//Get a quiz
 	public List<Result> findByQuizID(Integer quizID);
 	
-	
-	
 	//To get the total result of one student
 	@Query(value = "SELECT r.userid,SUM(r.totalcorrect) FROM result r where r.userid = :userid and r.quizid = :quizid", nativeQuery = true)
 	public Optional<Object[]> findGrouped(@Param("userid") String userID, @Param("quizid") Integer quizID);
@@ -40,11 +38,9 @@ public interface ResultRepository extends JpaRepository<Result , Integer>{
 	@Query(value = "select userid,sum(totalcorrect) from result join quiz where result.quizid = quiz.quizid group by userid;", nativeQuery = true)
 	public Optional<Object[]> findAllStudentResult();
 		
-	
-	
-		//get overall result of student
-		@Query(value = "select userid,sum(totalcorrect) from result join quiz where result.quizid = quiz.quizid and userid= :userid group by userid;", nativeQuery = true)
-		public Optional<Object[]> findOverallStudentResult(@Param("userid") String userID);
+	//get overall result of student
+	@Query(value = "select userid,sum(totalcorrect) from result join quiz where result.quizid = quiz.quizid and userid= :userid group by userid;", nativeQuery = true)
+	public Optional<Object[]> findOverallStudentResult(@Param("userid") String userID);
 		
 
 }

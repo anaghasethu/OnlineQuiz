@@ -18,7 +18,7 @@ export class QuizComponent implements OnInit {
   quiz !: Quiz[];
   score = 0;
   totalattempted = 0;
-
+  Quizname = localStorage.getItem('qname')
   constructor(private service : QuestionserviceService,private quiz_service : QuizserviceService,
     private activateRoute : ActivatedRoute,private result_service : ResultserviceService,
     private route: Router) { }
@@ -77,7 +77,7 @@ export class QuizComponent implements OnInit {
     console.log(quizid)
     this.result_service.saveResult(new Result(rID,Id,quizid,this.score,Qname)).subscribe(data => {
       console.log(data)
-      if(this.score > 1){
+      if(this.score > 6){
       this.route.navigateByUrl("/result");
       }else{
         this.route.navigateByUrl("/resultfail");

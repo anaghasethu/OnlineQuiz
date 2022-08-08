@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class StudenthomepageComponent implements OnInit {
 
+  id = localStorage.getItem('id')
+  name = localStorage.getItem('name')
   constructor(private route:Router) { }
 
   ngOnInit(): void {

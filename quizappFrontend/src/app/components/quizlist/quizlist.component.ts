@@ -45,4 +45,8 @@ export class QuizlistComponent implements OnInit {
      this.route.navigateByUrl("/quizquestion/"+quizId);
    }
 
+   GoToPre(){
+    this.route.navigateByUrl("/admin")
+  }
+
 }

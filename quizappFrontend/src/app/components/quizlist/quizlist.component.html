@@ -1,9 +1,17 @@
-<h3> Choose the category to view the quizzes..!</h3>
+<!-- <button type="button" class="btn btn-lg btn-outline-primary" (click)="GoToPre()"> Back </button> -->
+
+<a class="btn btn-light btn-lg" (click)="GoToPre()">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+
+
+<br>
+<h3 class="ms-5"> <b>Choose the category to view the quizzes..!</b></h3>
 
 <div>
   <a class="btn btn-outline-secondary btn-lg m-3" data-bs-toggle="collapse" href="#collapseExample" role="button" 
      aria-expanded="false" aria-controls="collapseExample"
-     *ngFor="let q of category_list" (click)="GetCategory(q.category)" style="margin-top:5%;width:15%">
+     *ngFor="let q of category_list" (click)="GetCategory(q.category)" style="margin-top:5%;width:15%; background-color: aliceblue;">
     <b>{{q.category}}</b>
   </a>
 

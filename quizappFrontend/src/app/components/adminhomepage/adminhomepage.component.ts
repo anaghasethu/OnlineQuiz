@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class AdminhomepageComponent implements OnInit {
 
 
-  ID = localStorage.getItem('id')
+  id = localStorage.getItem('id')
+  name = localStorage.getItem('name')
   constructor(private route : Router) { }
 
   ngOnInit(): void {
@@ -18,6 +19,10 @@ export class AdminhomepageComponent implements OnInit {
   GoToQuizDetails(){
     this.route.navigateByUrl("/quizlist")
 
+  }
+
+  Logout(){
+    this.route.navigateByUrl('')
   }
 
 
