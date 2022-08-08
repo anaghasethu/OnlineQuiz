@@ -1,4 +1,4 @@
-<a href="#" class="btn btn-light btn-lg" (click)="Previous()">
+<a  class="btn btn-light btn-lg" (click)="Previous()">
     <span class="glyphicon glyphicon-chevron-left"></span>
 </a>
 <h3 class="mt-5 mb-4">Test your knowledge..</h3>
@@ -13,7 +13,7 @@
             </tr>
     
         </thead>
-        <tr  *ngFor="let p of quiz" (click)="goToTest(p.quizId)">
+        <tr *ngFor="let p of quiz" (click)="goToTest(p.quizId)">
                 <td>{{p.quizId }} </td>
                 <td>{{p.quizName}}</td>
                 <td>{{p.categoryName}}</td>

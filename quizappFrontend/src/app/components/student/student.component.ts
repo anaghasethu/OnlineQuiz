@@ -32,8 +32,6 @@ export class StudentComponent implements OnInit {
      this.route.navigateByUrl("/test/"+"aptitude");
   }
 
- 
-
   backToMain(){
     this.route.navigateByUrl("/")
   }

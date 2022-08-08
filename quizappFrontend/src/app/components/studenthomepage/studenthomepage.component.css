@@ -1,0 +1,21 @@
+.container{
+  margin-left: 10%;
+}
+
+img{
+  height: 200px;
+  width: 205px;
+  margin-left: 10%;
+}
+
+.navbar .logo{
+  height: 20px;
+  width: 20px;
+  opacity: 50%;
+}
+
+.signout{
+  float: right;
+  height: 40px;
+  width: 40px;
+}

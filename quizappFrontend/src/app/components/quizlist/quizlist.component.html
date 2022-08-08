@@ -1,0 +1,15 @@
+<h3> Choose the category to view the quizzes..!</h3>
+
+<div>
+  <a class="btn btn-outline-secondary btn-lg m-3" data-bs-toggle="collapse" href="#collapseExample" role="button" 
+     aria-expanded="false" aria-controls="collapseExample"
+     *ngFor="let q of category_list" (click)="GetCategory(q.category)" style="margin-top:5%;width:15%">
+    <b>{{q.category}}</b>
+  </a>
+
+</div>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" (click)="goToTestPage(qname.quizId)" *ngFor="let qname of quiz">
+    {{qname.quizId}} &nbsp; {{qname.quizName}}
+  </div>
+</div>

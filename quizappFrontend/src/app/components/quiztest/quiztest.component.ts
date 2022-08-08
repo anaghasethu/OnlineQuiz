@@ -14,7 +14,7 @@ export class QuiztestComponent implements OnInit {
   quiz !: Quiz[];
   searchByCat!: string;
   constructor(private route:Router,private quiz_service : QuizserviceService,
-  private activateRoute: ActivatedRoute,private service:QuestionserviceService) { }
+    private activateRoute: ActivatedRoute,private service:QuestionserviceService) { }
 
   ngOnInit(): void {
     //   this.listOfQuizes()
@@ -34,19 +34,25 @@ export class QuiztestComponent implements OnInit {
     const CatName = this.activateRoute.snapshot.paramMap.get("categoryName");
     console.log(CatName)
     this.quiz_service.getQuizByCategory(CatName).subscribe((data=>{
-    this.quiz = data;
-    console.log(data)
+      this.quiz = data;
+      console.log(data)
     }))
-  }
-
-  goToTest(quizId:Number){
-   this.service.getQuestionByQuizId(quizId)
-   console.log(this.service.getQuestionByQuizId(quizId))
-   this.route.navigateByUrl("/quiz/"+quizId);
   }
 
   Previous(){
     this.route.navigateByUrl("/student")
+  }
+
+  goToTest(quizId:Number){
+    
+   this.service.getQuestionByQuizId(quizId)
+   for(var q of this.quiz){
+    if(q.quizId == quizId){
+      localStorage.setItem('qname',q.quizName)
+    }
+  }
+   console.log(this.service.getQuestionByQuizId(quizId))
+    this.route.navigateByUrl("/quiz/"+quizId);
   }
 }
 

@@ -1,0 +1,23 @@
+<button type="button" class="btn btn-lg" (click)="GoToHome()"> Home </button>
+<button type="button" class="btn btn-lg" (click)="GoToPre()"> Back </button>
+
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>User ID</th>        
+            <th>Quiz Name</th>
+            <th>Score</th>
+        </tr>
+        <tr class="list" *ngFor="let res of results">
+            <td> {{res.userID}}</td>
+            <td>{{res.quizName}}</td>
+            <td>{{res.totalCorrect}}</td>
+        </tr>
+        <tr>
+            <td> Total Result </td>
+            <td></td>
+            <td> {{total_score}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,15 @@
+<!-- <button type="button" class="btn btn-info"  >Home</button> -->
+<!-- <i class="bi bi-house-door" (click)="GoToHome()"></i> -->
+<!-- <button type="button" class="btn btn-info"  (click)="GoToQuizes()">Go to quizez</button> -->
+
+<button type="button" class="btn btn-lg" (click)="GoToHome()"> Home </button>
+<button type="button" class="btn btn-lg" (click)="GoToQuizes()"> Quiz </button>
+
+<div class="container border">
+    <h2 class="mt-5 mb-5">Oops !  You have not passed the Quiz</h2>
+    <p>You scored: {{fail_score}}</p>
+    <p>Total number of questions: {{totalquestions}}</p>
+    <p>Answered correctly: {{fail_score}}</p>
+    <p>Answered wrongly: {{wrongCount}}</p>
+    <br><br>
+</div>

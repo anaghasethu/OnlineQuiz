@@ -1,0 +1,28 @@
+<button type="button" class="btn btn-lg" (click)="GoToHome()"> Home </button>
+<button type="button" class="btn btn-lg" (click)="GoToQuizes()"> Quiz </button>
+
+
+<h3 class="m-5">Questions !!</h3>
+<br>
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th  class="ps-5">Question</th>
+            <th  class="ps-3">Options</th>
+        </tr>
+        <tr *ngFor="let que of question">
+            <td  class="ps-5 mb-2">{{que.question_Q}}</td>
+            <td  class="ps-3 mb-2">
+                <input type="checkbox" [checked]="que.option1 == que.answer"/> {{que.option1}}
+                <br>
+                <input type="checkbox" [checked]="que.option2 == que.answer"/>{{que.option2}}
+                <br>
+                <input type="checkbox" [checked]="que.option3 == que.answer"/>{{que.option3}}
+                <br>
+                <input type="checkbox" [checked]="que.option4 == que.answer"/>{{que.option4}}
+                <br>
+            </td>
+        </tr>
+    </table>
+</div>

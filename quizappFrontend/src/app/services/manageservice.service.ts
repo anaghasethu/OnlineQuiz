@@ -28,6 +28,11 @@ export class ManageserviceService {
     console.log(this.httpclient.get<getUserResponse>(this.userurl).pipe(map(response => response._embedded.users)))
     return this.httpclient.get<getUserResponse>(this.userurl).pipe(map(response => response._embedded.users))
   }
+
+  getStudentsByRole(): Observable<User[]>{
+    const prodNameURL = "http://localhost:8080/api/user/search/findByRole/?role=" + "student" 
+    return this.httpclient.get<getUserResponse>(prodNameURL).pipe(map(response => response._embedded.users))
+  }
 }
 
 interface getUserResponse {

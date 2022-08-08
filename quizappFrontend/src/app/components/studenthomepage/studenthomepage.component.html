@@ -1,0 +1,52 @@
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <img class="logo" src="../../../assets/images/logo.jfif" alt="" width="30" height="30">
+    </a>
+    
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#"><span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#"></a>
+          <a class="nav-item nav-link" href="#"></a>
+          <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+        </div>
+    </div>
+
+    <form class="form-inline">
+      <button class="btn btn-lg" (click)="Logout()"><span class="my-2 my-sm-0 glyphicon glyphicon-user signout"></span></button>
+    </form>
+</nav>
+
+    <div class="container">
+        <div class="row ms-5">
+            <div class="col-sm-3 ms-5">
+                <div class="card mt-5 ms-5" style="width: 250px; height: 450px;">
+                    <img src="./../../../assets/images/grade.jfif" class="card-img-top mt-5" alt="...">
+                    <div class="card-body">
+                      <p class="text-center mt-5"> Check your score here.!</p> 
+                    </div>
+                    <div class="card-footer btn" (click)="GoToGradebook()">
+                        GradeBook
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 ms-5">
+                <div class="card mt-5 ms-5" style="width: 250px; height: 450px;">
+                    <img src="./../../../assets/images/quiz.jfif" class="card-img-top mt-5" alt="...">
+                    <div class="card-body">
+                        <p class="text-center mt-5">It's quiz time.!</p>
+                    </div>
+                    <div class="card-footer btn" (click)="GoToQuiz()">
+                        Quiz
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    

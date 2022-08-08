@@ -1,14 +1,21 @@
-<div class="container">
-    <div class="question pt-5 pb-5" *ngFor="let que of question">
-        <p><b>{{que.question_Q}}</b></p>
-        <input type="checkbox" id="option1" name="option1" (click)="checkAnswer(que.option1,que.answer)" value="{{que.option1}}">
-        {{que.option1}}<br>
-        <input type="checkbox" id="option2" name="option2" (click)="checkAnswer(que.option2,que.answer)" value="{{que.option2}}">
-        {{que.option2}}<br>
-        <input type="checkbox" id="option3" name="option3" (click)="checkAnswer(que.option3,que.answer)" value="{{que.option3}}">
-        {{que.option3}}<br>
-        <input type="checkbox" id="option4" name="option4" (click)="checkAnswer(que.option4,que.answer)" value="{{que.option4}}">
-        {{que.option4}} <br>
-    </div>
-</div>
-
+<br><br><br>
+<p class="ms-5"><i>Select the correct answers from the options given.</i></p>
+<p class="ms-5"><b>All the best..!!!</b></p>
+   
+        <div class="container">
+            <div class="question pt-3 pb-3" *ngFor="let que of question">
+                <p><b>{{que.question_Q}}</b></p>
+                <input type="checkbox" id="option1" name="option1" (click)="checkAnswer(que.option1,que.answer)" value="{{que.option1}}">
+                {{que.option1}}<br>
+                <input type="checkbox" id="option2" name="option2" (click)="checkAnswer(que.option2,que.answer)" value="{{que.option2}}">
+                {{que.option2}}<br>
+                <input type="checkbox" id="option3" name="option3" (click)="checkAnswer(que.option3,que.answer)" value="{{que.option3}}">
+                {{que.option3}}<br>
+                <input type="checkbox" id="option4" name="option4" (click)="checkAnswer(que.option4,que.answer)" value="{{que.option4}}">
+                {{que.option4}} <br>
+                
+            </div>
+            <button type="button" class="btn btn-outline-success btn-lg"  (click)="submitQuiz()">Submit</button>
+        </div>
+        
+        

@@ -1,0 +1,21 @@
+.container{
+    margin-top: 5%;
+}
+
+table{
+    width: 400px;
+}
+
+th, td{
+    padding-left: 20px;
+    height: 40px;
+    align-content: center;
+}
+
+th{
+    background-color: gray;
+}
+
+.list:hover{
+    background-color: darkgray;
+}

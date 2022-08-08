@@ -1,0 +1,32 @@
+<!-- <div>
+  <button class="btn btn-lg" *ngFor="let q of category_list" (click)="GetCategory(q.category)" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    {{q.category}}
+  </button>
+</div>
+
+<div class="collapse" id="collapseExample">
+
+</div> -->
+
+
+        
+<p>
+  <a class="btn btn-primary m-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"
+  *ngFor="let q of category_list" (click)="GetCategory(q.category)">
+    {{q.category}}
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" *ngFor="let qname of quiz">
+    {{qname.quizName}}
+    <div class ="some" *ngFor="let res of result">
+      
+      <div *ngIf="res.quizID == qname.quizId && res.userID == ID  && qname.quizName === res.quizName" [(ngModel)]="res.totalCorrect">
+        {{res.totalCorrect}}
+        
+          </div>
+     </div>
+  </div>
+ </div>
+
+

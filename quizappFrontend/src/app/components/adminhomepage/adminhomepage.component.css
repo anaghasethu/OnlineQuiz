@@ -1,0 +1,19 @@
+.container{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.card{
+  height: 150px;
+  border: 2px solid rgb(18, 68, 99);
+}
+
+.card .btn{
+  background-color: rgb(192, 224, 235);
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  color: rgb(52, 52, 52);
+  font-size: 200%;
+  font-weight: bold;
+  }

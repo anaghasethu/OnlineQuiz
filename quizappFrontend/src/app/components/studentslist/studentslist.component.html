@@ -1,0 +1,23 @@
+<button type="button" class="btn btn-lg" (click)="GoToHome()"> Home </button>
+
+
+<p class="ms-5">Here are the list of students. Click on the student to get their performances.</p>
+<div class="container">
+    
+    <table class="table table-bordered">
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Role</th>
+        </tr>
+        <tr class="list" *ngFor="let student of users" (click)="GoToStudent(student.userID)">
+            <td>{{student.userID}}</td>
+            <td>{{student.userName}}</td>
+            <td>{{student.role}}</td>
+
+            <td *ngFor="let result of total_Res">
+                <p *ngIf="student.userID == result.id"> {{result.res}} </p>
+            </td>
+        </tr>
+    </table>
+</div>
