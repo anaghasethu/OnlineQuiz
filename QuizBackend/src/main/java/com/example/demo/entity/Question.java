@@ -39,7 +39,7 @@ public class Question {
 	@Column(name="quizid")
 	public Integer quizID;
 	
-	public Integer grade = 0;
+	
 	
 	public Question() {
 		
@@ -134,13 +134,7 @@ public class Question {
 		this.quizID = quizID;
 	}
 	
-	public Integer Correctanswers(Integer questionID ) {
-		
-		if(getAnswer() == getChoice())
-			grade =+ 1;
-		return grade;
-		
-	}
+	
 	
 	
 	

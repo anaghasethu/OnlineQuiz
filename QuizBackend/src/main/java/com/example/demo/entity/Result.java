@@ -3,6 +3,8 @@ package com.example.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,27 +12,39 @@ import javax.persistence.Table;
 @Table(name="result")
 public class Result {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "resultid")
+	public Integer resultID;
+	
 	@Column(name="userid")
 	public String userID;
 	
-	@Id
+	
 	@Column(name="quizid")
 	public Integer quizID;
 	
 	@Column(name="totalcorrect")
-	public Integer totalCorrect = 0;
-	
-	
-	
+	public Integer totalCorrect;
+
 	public Result() {
-		
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	
-	public Result(String userID,Integer quizID,Integer totalCorrect) {
-		
+
+	public Result(String userID, Integer quizID, Integer totalCorrect) {
+		super();
 		this.userID = userID;
 		this.quizID = quizID;
 		this.totalCorrect = totalCorrect;
+	}
+
+	public Integer getResultID() {
+		return resultID;
+	}
+
+	public void setResultID(Integer resultID) {
+		this.resultID = resultID;
 	}
 
 	public String getUserID() {
@@ -49,25 +63,22 @@ public class Result {
 		this.quizID = quizID;
 	}
 
-	public Integer getTotalcorrect() {
+	public Integer getTotalCorrect() {
 		return totalCorrect;
 	}
 
-	public void setTotalcorrect(Integer totalCorrect) { 
-		
+	public void setTotalCorrect(Integer totalCorrect) {
 		this.totalCorrect = totalCorrect;
 	}
-	
-	public Integer addresult(Integer quizID) {
-		
-		return quizID;
-		
-	}
-	
 
 	@Override
 	public String toString() {
-		return "Result [userID=" + userID + ", quizID=" + quizID + ", totalCorrect=" + totalCorrect + "]";
+		return "Result [resultID=" + resultID + ", userID=" + userID + ", quizID=" + quizID + ", totalCorrect="
+				+ totalCorrect + "]";
 	}
+	
+	
+	
+	
 
 }

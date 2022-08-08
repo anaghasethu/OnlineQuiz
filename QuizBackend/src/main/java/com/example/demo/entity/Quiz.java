@@ -17,15 +17,20 @@ public class Quiz {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer quizId;
 	
+	@Column(name = "quizname")
+	public String quizName;
+	
 	@Column(name="category")
 	public String categoryName;
 	
 	public Quiz() {
 		
 	}
-	
-	public Quiz(Integer quizId,String categoryName) {
+
+	public Quiz(Integer quizId, String quizName, String categoryName) {
+		super();
 		this.quizId = quizId;
+		this.quizName = quizName;
 		this.categoryName = categoryName;
 	}
 
@@ -35,6 +40,14 @@ public class Quiz {
 
 	public void setQuizId(Integer quizId) {
 		this.quizId = quizId;
+	}
+
+	public String getQuizName() {
+		return quizName;
+	}
+
+	public void setQuizName(String quizName) {
+		this.quizName = quizName;
 	}
 
 	public String getCategoryName() {
@@ -47,7 +60,8 @@ public class Quiz {
 
 	@Override
 	public String toString() {
-		return "Quiz [quizId=" + quizId + ", categoryName=" + categoryName + "]";
+		return "Quiz [quizId=" + quizId + ", quizName=" + quizName + ", categoryName=" + categoryName + "]";
 	}
-
+	
+	
 }
